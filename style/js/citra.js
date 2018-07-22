@@ -22,8 +22,13 @@ window.onload = function() {
             img.src = reader.result;
             defaultscr=reader.result;
             img.onload = function(){
+            //inisiasi menu collapse
+            if($('#tutup').is(":hidden")){
+            }else{              
+              $('#tutup').click();//trigger toggle
+            }
+            //
             draw(this);
-            $('#tutup').click();//trigger toggle
             document.getElementById('canvas').style.background='url(media/a.jpg)';
             document.getElementById('canvas').style.backgroundSize='20px 20px';
             document.getElementById('canvas').style.backgroundRepeat='repeat';
